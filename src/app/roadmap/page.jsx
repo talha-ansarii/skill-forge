@@ -74,6 +74,16 @@ let email;
     <div className="min-h-screen bg-black text-white p-8">
       <h1 className="text-4xl font-bold mb-12 text-center">Learning Roadmap</h1>
       <div className="space-y-16">
+      {!roadmap && <p className="text-gray-400">
+        <Link
+                id="animated-auth-btn"
+                href="/form"
+                className="bg-white mt-3 text-black tracking-normal font-sans font-semibold px-3 py-2 rounded-lg hover:bg-black hover:text-white transition-colors duration-300"
+              >
+               Fill form to Get Started
+              </Link>
+      </p>
+      }
         {roadmap && 
         Object.entries(roadmap).map(([level, courses]) => (
           <div key={level} className="space-y-6">
