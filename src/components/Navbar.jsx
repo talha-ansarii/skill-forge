@@ -21,7 +21,7 @@ export default function Navbar() {
             <img
               id="animated-logo"
               src="/logo.jpg"
-              alt="MediMitra Logo"
+              alt="Logo"
               className="h-16"
             />
           </Link>

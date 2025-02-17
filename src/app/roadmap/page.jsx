@@ -52,6 +52,8 @@ const Roadmap = () => {
     const data = await response.json()
 
     console.log(data)
+
+    if(data?.roadmap){
     const road = data.roadmap
     const roadFinal = {
       beginner: road.beginner,
@@ -59,6 +61,10 @@ const Roadmap = () => {
       advanced: road.advanced
     }
     setRoadmap(roadFinal)
+    }else{
+      setRoadmap(null)
+    }
+    
   }
 
 
@@ -74,7 +80,8 @@ let email;
     <div className="min-h-screen bg-black text-white p-8">
       <h1 className="text-4xl font-bold mb-12 text-center">Learning Roadmap</h1>
       <div className="space-y-16">
-      {!roadmap && <p className="text-gray-400">
+      {!roadmap && 
+      <div className="text-gray-400 w-full flex justify-center items-center">
         <Link
                 id="animated-auth-btn"
                 href="/form"
@@ -82,7 +89,7 @@ let email;
               >
                Fill form to Get Started
               </Link>
-      </p>
+      </div>
       }
         {roadmap && 
         Object.entries(roadmap).map(([level, courses]) => (
