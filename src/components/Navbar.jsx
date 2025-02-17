@@ -87,6 +87,14 @@ export default function Navbar() {
               >
                 Logout
               </button>
+              <button
+                onClick={() =>{
+                  window.location.href = '/roadmap'
+                }}
+                className="bg-white text-black font-inter font-bold px-4 py-2 rounded hover:bg-purple-500 hover:text-white transition-colors duration-300"
+              >
+                Roadmap
+              </button>
             </div>
           )}
           <button onClick={toggleMenu} className="block lg:hidden">
