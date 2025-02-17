@@ -1,0 +1,43 @@
+{
+  "name": "nameless",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.0",
+    "@tabler/icons-react": "^3.21.0",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.1",
+    "formidable": "^3.5.2",
+    "framer-motion": "^11.11.11",
+    "fs.promises": "^0.1.2",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.475.0",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "next": "14.2.3",
+    "next-auth": "^4.24.7",
+    "openai": "^4.85.1",
+    "puppeteer": "^24.2.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@gradio/client": "^1.7.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
