@@ -10,6 +10,7 @@ const Register = () => {
   const [error, setError] = useState("");
   const router = useRouter();
   const { data: session, status: sessionStatus } = useSession();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
@@ -40,6 +41,7 @@ const Register = () => {
     }
 
     try {
+      setLoading(true);
       const res = await fetch("/api/register", {
         method: "POST",
         headers: {
@@ -51,10 +53,12 @@ const Register = () => {
         }),
       });
       if (res.status === 400) {
+        setLoading(false);
         setError("This email is already registered");
       }
       if (res.status === 200) {
         setError("");
+        setLoading(false);
         router.push("/auth/login");
       }
     } catch (error) {
