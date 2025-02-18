@@ -6,7 +6,7 @@ import { Client } from "@gradio/client";
 
 export const POST = async (request) => {
   try {
-    const client = await Client.connect("https://58d8a265d0c204a1b2.gradio.live/");
+    const client = await Client.connect("https://727c7a2ee9dffe1bd8.gradio.live/");
 
     await connect(); // Ensure MongoDB connection is established
 
